@@ -1,0 +1,5 @@
+follow the instructions below
+
+1. write a program that will greet a user based on the value of the variable "time". 
+the program will have room for morning, afternoon and night
+
