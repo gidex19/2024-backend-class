@@ -20,5 +20,7 @@ for candidate in candidates:
 
     for kid in candidates[candidate]["kids"]:
         print(f"My Name is {last_name} {kid}")
+    #using list comprehension    
+    # [print(f"My Name is {last_name} {kid}") for kid in candidates[candidate]["kids"]]
     print("\n")    
 
