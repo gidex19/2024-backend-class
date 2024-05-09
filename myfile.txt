@@ -1,0 +1,4 @@
+My Name is Gideon
+I am a Nigerian Software Developer
+I code in Python, Javascript and Dart(flutter)
+This is the appended text

@@ -29,3 +29,4 @@ for i in range(10):
     if selected_answer == question["answer"]:
         score += 1
 print(f"Exam completed\nYou scored {score}/10")   
+

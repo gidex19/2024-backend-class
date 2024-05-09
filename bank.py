@@ -1,17 +1,25 @@
-accounts = {
+import pickle
+# accounts = {
     
-        "0909098878": {
-            "name": "Musa Adam",
-            "balance": 20000.0,
-            "pin": '2466'
-        },
+#         "0909098878": {
+#             "name": "Musa Adam",
+#             "balance": 20000.0,
+#             "pin": '2466'
+#         },
       
-        "0887878878": {
-            "name": "Baks Yemi",
-            "balance": 1000.0,
-            "pin": '3425'
-        }
-    }
+#         "0887878878": {
+#             "name": "Baks Yemi",
+#             "balance": 1000.0,
+#             "pin": '3425'
+#         }
+#     }
+
+
+f = open("banks.txt", "rb" )
+
+accounts = pickle.loads(f.read())
+# print(type(d))
+# print(d)
 
 
 action = input("Press 1 for Transfer\nPress 2 for withdrawals\n What do you want to do? ")
@@ -22,6 +30,10 @@ if action == '1':
     print("TRANSFER SUCCESSFUL")
     print("--------------account----------")
     print(accounts)
+
+    f = open("banks.txt", "wb" )
+    pickle.dump(accounts, f)
+    f.close()
     
 elif action == '2':
     act_no = input("Please enter your account number: ")
@@ -40,6 +52,16 @@ elif action == '2':
             print("INSUFFICIENT FUNDS")    
     else:
         print("invalid PIN")
+    f = open("banks.txt", "wb" )
+    pickle.dump(accounts, f)
+    f.close()    
 else:
-    print("Wrong Input")    
+    print("Wrong Input") 
+    print(accounts)   
+
+# f = open("banks.txt", "wb" )
+# pickle.dump(accounts, f)
+# x = f.close()
+# x = dict(x)
+# print(type(x))
 
